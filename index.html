@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App - Your Local Weather Guide</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="logo">
+                <i class="fas fa-cloud-sun"></i>
+                Weather App
+            </h1>
+            <div class="header-actions">
+                <button id="locationBtn" class="location-btn">
+                    <i class="fas fa-map-marker-alt"></i>
+                    My Location
+                </button>
+            </div>
+        </header>
+
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Search for a city..." 
+                    class="search-input"
+                >
+                <button id="searchBtn" class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- Loading State -->
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Loading weather data...</p>
+        </div>
+
+        <!-- Error Message -->
+        <div id="error" class="error-message hidden">
+            <i class="fas fa-exclamation-triangle"></i>
+            <p id="errorText">Something went wrong. Please try again.</p>
+        </div>
+
+        <!-- Weather Content -->
+        <div id="weatherContent" class="weather-content">
+            <!-- Current Weather -->
+            <section class="current-weather">
+                <div class="weather-card">
+                    <div class="weather-header">
+                        <div class="location-info">
+                            <h2 id="currentLocation" class="location-name">London</h2>
+                            <p id="currentDate" class="date-time">Loading...</p>
+                        </div>
+                        <div class="last-updated">
+                            <small id="lastUpdated">Updated just now</small>
+                        </div>
+                    </div>
+                    
+                    <div class="weather-main">
+                        <div class="temperature-section">
+                            <div class="temperature-display">
+                                <span id="currentTemp" class="temperature">--</span>
+                                <span class="unit">°C</span>
+                            </div>
+                            <div class="weather-description">
+                                <span id="weatherDescription" class="description">Loading...</span>
+                                <div id="weatherIcon" class="weather-icon">
+                                    <i class="fas fa-cloud"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="weather-details">
+                            <div class="detail-item">
+                                <i class="fas fa-thermometer-half"></i>
+                                <span class="label">Feels Like</span>
+                                <span id="feelsLike" class="value">--°C</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-tint"></i>
+                                <span class="label">Humidity</span>
+                                <span id="humidity" class="value">--%</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-wind"></i>
+                                <span class="label">Wind Speed</span>
+                                <span id="windSpeed" class="value">-- km/h</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-eye"></i>
+                                <span class="label">Visibility</span>
+                                <span id="visibility" class="value">-- km</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-compress"></i>
+                                <span class="label">Pressure</span>
+                                <span id="pressure" class="value">-- hPa</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-cloud-rain"></i>
+                                <span class="label">Precipitation</span>
+                                <span id="precipitation" class="value">-- mm</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5-Day Forecast -->
+            <section class="forecast-section">
+                <h3 class="forecast-title">5-Day Forecast</h3>
+                <div id="forecastContainer" class="forecast-container">
+                    <!-- Forecast items will be populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Hourly Forecast -->
+            <section class="hourly-section">
+                <h3 class="hourly-title">Today's Hourly Forecast</h3>
+                <div id="hourlyContainer" class="hourly-container">
+                    <!-- Hourly items will be populated by JavaScript -->
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Weather data provided by OpenWeatherMap</p>
+            <p>Built with ❤️ using HTML, CSS, and JavaScript</p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/api.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
