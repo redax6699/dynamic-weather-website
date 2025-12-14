@@ -1,10 +1,18 @@
 ☀️ Weather App Pro - Application Météo Interactive
-Aperçu du Projet
+
+      Aperçu du Projet
+      
 Ce projet est une application web de météo interactive et immersive développée en utilisant HTML, Tailwind CSS et JavaScript pur. Il va au-delà des fonctionnalités de base en intégrant un design moderne de type "Glassmorphism", des animations météorologiques dynamiques, une ambiance sonore, et une carte Leaflet.
+
 
 L'application permet aux utilisateurs de consulter la météo actuelle, les prévisions horaires et sur 7 jours pour n'importe quelle ville, avec une option de géolocalisation et un système de favoris.
 
-✨ Fonctionnalités Clés
+
+
+    ✨ Fonctionnalités Clés
+
+
+
 Design Glassmorphism : Interface utilisateur moderne et élégante.
 
 Géolocalisation : Détection automatique de la position de l'utilisateur pour une météo instantanée.
